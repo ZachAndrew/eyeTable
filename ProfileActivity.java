@@ -58,12 +58,13 @@ public class ProfileActivity extends AppCompatActivity
                     // User is signed in
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
                     View header = navigationView.getHeaderView(0);
+
                     mUser_name = (TextView) header.findViewById(R.id.user_name);
                     mUser_email = (TextView) header.findViewById(R.id.user_email);
                     //mProfile_name = (TextView) findViewById(R.id.profile_name);
                     //mProfile_email = (TextView) findViewById(R.id.profile_email);
 
-                    mUser_name.setText(user.getDisplayName());
+                  //#4  mUser_name.setText(user.getDisplayName());
                     mUser_email.setText(user.getEmail());
                  //   mProfile_name.setText(user.getDisplayName());
                  //   mProfile_email.setText(user.getEmail());
@@ -112,11 +113,11 @@ public class ProfileActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_leagues) {
-            Intent intent = new Intent(this, LeaguesActivity.class);
+            Intent intent = new Intent(this, LecturesActivity.class);
             startActivity(intent);
             //*Adding League Codes function* start
         } else if (id == R.id.nav_league_codes) {
-            Intent intent = new Intent(this, LeagueCodesActivity.class);
+            Intent intent = new Intent(this, LectureCodesActivity.class);
             startActivity(intent);
             //end
         } else if (id == R.id.nav_fixtures_and_results) {
@@ -126,7 +127,10 @@ public class ProfileActivity extends AppCompatActivity
             Intent intent = new Intent(this, HowToPlayActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_profile) {
-            onBackPressed();
+            Intent intent=new Intent(this,ProfileActivity.class);
+            startActivity(intent);
+            // #4
+            //onBackPressed();
         } else if (id == R.id.nav_help) {
             Intent intent = new Intent(this, HelpActivity.class);
             startActivity(intent);

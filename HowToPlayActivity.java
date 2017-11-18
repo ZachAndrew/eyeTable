@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 
-public class HelpActivity extends AppCompatActivity
+public class HowToPlayActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private static final String TAG = "Leagues";
@@ -32,7 +32,7 @@ public class HelpActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_help);
+        setContentView(R.layout.activity_how_to_play);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -64,7 +64,7 @@ public class HelpActivity extends AppCompatActivity
                 } else {
                     //User is signed out
                     Log.d(TAG, "onAuthStateChanged:signed_out");
-                    Intent intent = new Intent(HelpActivity.this, eye.class);
+                    Intent intent = new Intent(HowToPlayActivity.this, eye.class);
                     startActivity(intent);
                 }
             }
@@ -84,7 +84,7 @@ public class HelpActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.help, menu);
+        getMenuInflater().inflate(R.menu.how_to_play, menu);
         return true;
     }
 
@@ -116,13 +116,13 @@ public class HelpActivity extends AppCompatActivity
             Intent intent = new Intent(this, FixturesAndResultsActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_how_to_play) {
-            Intent intent = new Intent(this, HowToPlayActivity.class);
-            startActivity(intent);
+            onBackPressed();
         } else if (id == R.id.nav_profile) {
             Intent intent = new Intent(this, ProfileActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_help) {
-            onBackPressed();
+            Intent intent = new Intent(this, HelpActivity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

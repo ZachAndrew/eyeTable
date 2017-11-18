@@ -110,7 +110,7 @@ public class LogInActivity extends AppCompatActivity {
                                     final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                                     boolean emailVerified = user.isEmailVerified();
                                     if(emailVerified) {
-                                        //#########   startActivity(new Intent(LogInActivity.this, LeaguesActivity.class));
+                                        //#########   startActivity(new Intent(LogInActivity.this, LecturesActivity.class));
                                         //##########   finish();
                                         //   finishAffinity();
 
@@ -150,7 +150,7 @@ public class LogInActivity extends AppCompatActivity {
                                         //****MAKE USER ID ACCESSIBLE end*****
 
 
-                                        Intent intent = new Intent(LogInActivity.this, LeaguesActivity.class);
+                                        Intent intent = new Intent(LogInActivity.this, LecturesActivity.class);
                                         //***
                                         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | IntentCompat.FLAG_ACTIVITY_CLEAR_TASK);

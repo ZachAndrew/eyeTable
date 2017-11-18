@@ -3,24 +3,30 @@ package andrew.zach.eyeTableP1;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.util.Log;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+/**
+ * Created by Zach on 29/03/2017.
+ */
 
-public class HelpActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class LectureCodesActivity
+
+    extends AppCompatActivity
+            implements NavigationView.OnNavigationItemSelectedListener {
 
     private static final String TAG = "Leagues";
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -28,11 +34,13 @@ public class HelpActivity extends AppCompatActivity
 
     private TextView mUser_name;
     private TextView mUser_email;
+ //   private TextView mProfile_name;
+ //   private TextView mProfile_email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_help);
+        setContentView(R.layout.activity_lect_and_clubs);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -41,6 +49,10 @@ public class HelpActivity extends AppCompatActivity
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
+
+        //*ListView*
+        ListView myList=(ListView)findViewById(R.id.listViewLeagueCodes);// a view for LeagueCodes codes, stored on league creation
+
 
         final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -58,18 +70,42 @@ public class HelpActivity extends AppCompatActivity
                     View header = navigationView.getHeaderView(0);
                     mUser_name = (TextView) header.findViewById(R.id.user_name);
                     mUser_email = (TextView) header.findViewById(R.id.user_email);
+               //     mProfile_name = (TextView) findViewById(R.id.profile_name);
+               //     mProfile_email = (TextView) findViewById(R.id.profile_email);
 
                     mUser_name.setText(user.getDisplayName());
                     mUser_email.setText(user.getEmail());
+                //    mProfile_name.setText(user.getDisplayName());
+                //    mProfile_email.setText(user.getEmail());
                 } else {
                     //User is signed out
                     Log.d(TAG, "onAuthStateChanged:signed_out");
-                    Intent intent = new Intent(HelpActivity.this, eye.class);
+                    Intent intent = new Intent(LectureCodesActivity.this, eye.class);
                     startActivity(intent);
                 }
             }
         };
-    }
+
+    /*    DatabaseReference refToLeagueCodes= FirebaseDatabase.getInstance().getReferenceFromUrl("");
+
+
+        FirebaseListAdapter <List> listAdapter=new FirebaseListAdapter<List>(
+
+                LectureCodesActivity.this,
+                List.class,
+                android.R.layout.simple_list_item_1,
+                refToLeagueCodes
+
+
+        ) {
+            @Override
+            protected void populateView(View v, List model, int position) {
+
+            }
+        };*/
+
+
+    }//*outside onCreate*
 
     @Override
     public void onBackPressed() {
@@ -84,7 +120,7 @@ public class HelpActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.help, menu);
+        getMenuInflater().inflate(R.menu.league_codes, menu);
         return true;
     }
 
@@ -119,10 +155,10 @@ public class HelpActivity extends AppCompatActivity
             Intent intent = new Intent(this, HowToPlayActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_profile) {
-            Intent intent = new Intent(this, ProfileActivity.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_help) {
             onBackPressed();
+        } else if (id == R.id.nav_help) {
+            Intent intent = new Intent(this, HelpActivity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -130,12 +166,32 @@ public class HelpActivity extends AppCompatActivity
         return true;
     }
 
-    public void logOut (View v) {
+    public void changeName(View v) {
+        Intent intent = new Intent(this, ChangeNameActivity.class);
+        startActivity(intent);
+    }
+
+  /*  public void changeEmail(View v) {
+        Intent intent = new Intent(this, ChangeEmailActivity.class);
+        startActivity(intent);
+    }
+
+    public void changePassword(View v) {
+        Intent intent = new Intent(this, ChangePasswordActivity.class);
+        startActivity(intent);
+    }
+
+    public void deleteAccount(View v) {
+        Intent intent = new Intent(this, DeleteAccountActivity.class);
+        startActivity(intent);
+    }*/
+
+    public void logOut(View v) {
         FirebaseAuth.getInstance().signOut();
     }
 
     @Override
-    public void onStart(){
+    public void onStart() {
         super.onStart();
         mAuth.addAuthStateListener(mAuthListener);
     }
@@ -147,4 +203,5 @@ public class HelpActivity extends AppCompatActivity
             mAuth.removeAuthStateListener(mAuthListener);
         }
     }
+
 }
