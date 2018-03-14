@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="andrew.zach.eyeTableP1">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/eye_logo"
+        android:label="@string/app_name"
+
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+      <activity android:name="andrew.zach.eyeTableP1.WelcomePageActivity"
+          android:theme="@style/Theme.AppCompat.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    <activity
+        android:name="andrew.zach.eyeTableP1.SignUpActivity"
+        android:label="@string/sign_up_page_name">
+    </activity>
+
+    <activity
+        android:name="andrew.zach.eyeTableP1.LogInActivity"
+        android:label="@string/log_in_page_name" />
+    <activity
+        android:name="andrew.zach.eyeTableP1.EmailVerificationActivity"
+        android:label="@string/email_verification_page_name" />
+    <activity
+        android:name="andrew.zach.eyeTableP1.PasswordResetActivity"
+        android:label="@string/password_reset_page_name" />
+
+        <activity android:name=".cellTables"/>
+
+        <activity
+            android:name=".LecturesActivity"
+            android:label="@string/leagues_page_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CreateLectureActivity"
+            android:label="@string/create_league_page_name"
+            android:parentActivityName=".LecturesActivity" />
+        <activity
+            android:name=".LectureCreatedActivity"
+            android:label="@string/league_created_page_name" />
+        <activity
+            android:name=".JoinLeagueActivity"
+            android:label="@string/join_league_page_name"
+            android:parentActivityName=".LecturesActivity" />
+        <activity
+            android:name=".ViewLeagueActivity"
+            android:label="@string/view_league_page_name"
+            android:parentActivityName=".LecturesActivity" />
+        <activity
+            android:name=".ManageLectureActivity"
+            android:label="@string/manage_league_page_name"
+            android:parentActivityName=".ViewLeagueActivity" />
+        <activity
+            android:name=".EyeTableActivity"
+            android:label="@string/fixtures_and_results_page_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--<activity
+            android:name=".PickTeamActivity"
+            android:label="@string/pick_team_page_name"
+            android:parentActivityName=".ViewLeagueActivity" /> -->
+        <activity
+            android:name=".HowToPlayActivity"
+            android:label="@string/how_to_play_page_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/title_activity_profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".HelpActivity"
+            android:label="@string/title_activity_help"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ChangeNameActivity"
+            android:label="@string/change_name_page_name"
+            android:parentActivityName=".ProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ChangeEmailActivity"
+            android:label="@string/change_email_page_name"
+            android:parentActivityName=".ProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ChangePasswordActivity"
+            android:label="@string/change_password_page_name"
+            android:parentActivityName=".ProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".DeleteAccountActivity"
+            android:label="@string/delete_account_page_name"
+            android:parentActivityName=".ProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".UsersTeamsActivity"
+            android:label="@string/users_teams_page_name"
+            android:parentActivityName=".ViewLeagueActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".ViewLectureInfo"
+            android:parentActivityName=".LecturesActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".ClubsAndSocsActivity"
+            android:parentActivityName=".LecturesActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity android:name=".LectureCodesActivity"
+            android:parentActivityName=".LecturesActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".CreateClubActivity"
+            android:parentActivityName=".CreateClubActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".ViewClubs"
+            android:parentActivityName=".LecturesActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            >
+        </activity>
+        <activity android:name=".Pop"
+            android:theme="@style/AppTheme.PopTheme"
+            >
+        </activity>
+</application>
+
+</manifest>

@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_color"
+    android:gravity="bottom"
+    android:orientation="vertical"
+
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"> -->
+
+<!--test 1 start:-->
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="60dp">
+
+
+
+ <!-- trying to implement scrollwView for buttons -->
+ <HorizontalScrollView
+     android:id="@+id/horizontalScrollView2"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     tools:layout_editor_absoluteX="0dp"
+     tools:layout_editor_absoluteY="0dp">
+
+
+  <android.support.constraint.ConstraintLayout
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+   <TableLayout
+       android:id="@+id/tableLayout"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_alignParentLeft="true"
+       android:layout_alignParentRight="true"
+       android:layout_alignParentTop="true"
+       android:theme="@style/ThemeOverlay.AppCompat.Dark"
+       app:layout_constraintTop_toTopOf="parent">
+
+    <TableRow
+        android:id="@+id/top_row"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_weight="2">
+
+
+     <TextView
+         android:id="@+id/spaceView"
+         android:layout_width="wrap_content"
+         android:layout_height="30dp"
+         android:layout_weight="0.16" />
+
+
+     <TextView
+         android:id="@+id/monday"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="0.16"
+         android:text="@string/monday"
+         android:textAlignment="center"
+         android:textSize="12sp" />
+
+     <TextView
+         android:id="@+id/tuesday"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="0.16"
+         android:text="@string/tuesday"
+         android:textAlignment="center"
+         android:textSize="12sp" />
+
+     <TextView
+         android:id="@+id/wednesday"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="0.16"
+         android:text="@string/wednesday"
+         android:textAlignment="center"
+         android:textSize="11sp" />
+
+     <TextView
+         android:id="@+id/thursday"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="0.16"
+         android:text="@string/thursday"
+         android:textAlignment="center"
+         android:textSize="12sp" />
+
+     <TextView
+         android:id="@+id/friday"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="0.16"
+         android:text="@string/friday"
+         android:textSize="12sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+     <!-- android:background="@drawable/border" > -->
+
+     <TextView
+         android:id="@+id/textView1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingLeft="5dp"
+         android:text="07:00" />
+
+     <Button
+         android:id="@+id/button_slot_rc11"
+         android:layout_width="match_parent"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc12"
+         android:layout_width="match_parent"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc13"
+         android:layout_width="match_parent"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc14"
+         android:layout_width="match_parent"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc15"
+         android:layout_width="match_parent"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="1">
+     <!-- android:background="@drawable/border" > -->
+
+     <TextView
+         android:id="@+id/textView2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingLeft="5dp"
+         android:text="08:00" />
+
+     <!--(1)testing onClick function -->
+     <Button
+         android:id="@+id/button_slot_rc21"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <!--(2)testing onCLick function -->
+     <Button
+         android:id="@+id/button_slot_rc22"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc23"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc24"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc25"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="1">
+     <!-- android:background="@drawable/border" > -->
+
+     <TextView
+         android:id="@+id/textView3"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingLeft="5dp"
+         android:text="09:00" />
+
+
+     <Button
+         android:id="@+id/button_slot_rc28"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc32"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc33"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc34"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc35"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="1">
+     <!-- android:background="@drawable/border" > -->
+
+     <TextView
+         android:id="@+id/textView4"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingLeft="5dp"
+         android:text="10:00" />
+
+     <Button
+         android:id="@+id/button_slot_rc41"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc42"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc43"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc44"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc45"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow5"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="1">
+     <!-- android:background="@drawable/border" > -->
+
+     <TextView
+         android:id="@+id/textView5"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingLeft="5dp"
+         android:text="11:00" />
+
+     <Button
+         android:id="@+id/button_slot_rc51"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc52"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc53"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc54"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc55"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow6"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="1">
+     <!-- android:background="@drawable/border" > -->
+
+     <TextView
+         android:id="@+id/textView6"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingLeft="5dp"
+         android:text="12:00" />
+
+     <Button
+         android:id="@+id/button_slot_rc61"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc62"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc63"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc64"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc65"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow7"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="1">
+     <!-- android:background="@drawable/border" > -->
+
+     <TextView
+         android:id="@+id/textView7"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingLeft="5dp"
+         android:text="13:00" />
+
+     <Button
+         android:id="@+id/button_slot_rc71"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc72"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc73"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc74"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc75"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow8"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="1">
+     <!-- android:background="@drawable/border" > -->
+
+     <TextView
+         android:id="@+id/textView8"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingLeft="5dp"
+         android:text="14:00" />
+
+     <Button
+         android:id="@+id/button_slot_rc81"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc82"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc83"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc84"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc85"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow9"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="1">
+     <!-- android:background="@drawable/border" > -->
+
+     <TextView
+         android:id="@+id/textView9"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingLeft="5dp"
+         android:text="15:00" />
+
+     <Button
+         android:id="@+id/button_slot_rc91"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc92"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc93"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc94"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc95"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow10"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="1">
+     <!--android:background="@drawable/border" > -->
+
+     <TextView
+         android:id="@+id/textView10"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingLeft="5dp"
+         android:text="16:00" />
+
+     <Button
+         android:id="@+id/button_slot_rc101"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc102"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc103"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc104"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc105"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow11"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="1">
+     <!-- android:background="@drawable/border" > -->
+
+
+     <TextView
+         android:id="@+id/textView11"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingLeft="5dp"
+         android:text="17:00" />
+
+     <Button
+         android:id="@+id/button_slot_rc111"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc112"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc113"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc114"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc115"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow12"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="1">
+     <!-- android:background="@drawable/border" > -->
+
+     <TextView
+         android:id="@+id/textView12"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingLeft="5dp"
+         android:text="18:00" />
+
+     <Button
+         android:id="@+id/button_slot_rc121"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc122"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc123"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc124"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc125"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow13"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="1">
+     <!-- android:background="@drawable/border" > -->
+
+     <TextView
+         android:id="@+id/textView13"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingLeft="5dp"
+         android:text="19:00" />
+
+     <Button
+         android:id="@+id/button_slot_rc128"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc132"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc133"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc134"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc135"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow14"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="1">
+     <!--android:background="@drawable/border" >-->
+
+     <TextView
+         android:id="@+id/textView14"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingLeft="5dp"
+         android:text="20:00" />
+
+     <Button
+         android:id="@+id/button_slot_rc141"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc142"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc143"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc144"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc145"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow15"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="1">
+     <!--android:background="@drawable/border" >-->
+
+     <TextView
+         android:id="@+id/textView15"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingLeft="5dp"
+         android:text="21:00" />
+
+     <Button
+         android:id="@+id/button_slot_rc151"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc152"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc153"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc154"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc155"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow16"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="1">
+     <!--android:background="@drawable/border" > -->
+
+     <TextView
+         android:id="@+id/textView16"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingLeft="5dp"
+         android:text="22:00" />
+
+     <Button
+         android:id="@+id/button_slot_rc161"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc162"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc163"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc164"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+
+     <Button
+         android:id="@+id/button_slot_rc165"
+         android:layout_width="55dp"
+         android:layout_height="33dp"
+         android:onClick="onClick"
+         android:text="Slot"
+         android:textSize="7sp" />
+    </TableRow>
+
+    <!--test 1 end:-->
+
+    <!-- <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+      android:id="@+id/user_name"
+      android:textColor="@color/white_text"
+      android:textSize="14sp" />
+
+  <TextView
+      android:id="@+id/user_email"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" />
+
+
+</LinearLayout> -->
+   </TableLayout>
+
+
+  </android.support.constraint.ConstraintLayout>
+
+
+ </HorizontalScrollView>
+
+ <TextView
+     android:id="@+id/textView_time"
+     android:layout_width="42dp"
+     android:layout_height="0dp"
+     android:background="@color/background_grey"
+     android:text="Time"
+     android:textSize="14.05sp"
+     android:textColor="@color/redText"
+     app:layout_constraintBottom_toBottomOf="@+id/tableLayout"
+     app:layout_constraintStart_toStartOf="@+id/tableLayout"
+     app:layout_constraintTop_toTopOf="@+id/tableLayout"
+     app:layout_constraintVertical_bias="0.0" />
+
+</android.support.constraint.ConstraintLayout>

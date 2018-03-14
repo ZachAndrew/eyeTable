@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_text"
+
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+
+
+    <!-- testing out new interface system  -->
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="266dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/eye_table_text1" />
+
+    <!-- temp removal
+    <TextView
+        android:id="@+id/user_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="68dp" />
+        -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:id="@+id/user_name"
+        android:textColor="@color/white_text"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/user_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="android.studio@android.com"
+        android:textSize="14sp" />
+
+
+</LinearLayout>

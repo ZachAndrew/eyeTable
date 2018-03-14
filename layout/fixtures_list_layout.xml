@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/homeTeamBadge"
+        app:layout_constraintRight_toLeftOf="@+id/homeTeamGoals"
+        app:layout_constraintBottom_toBottomOf="@+id/vs"
+        app:layout_constraintTop_toTopOf="@+id/vs"
+        android:layout_marginEnd="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:id="@+id/homeTeamName"
+        android:text="homeTeam"
+        app:layout_constraintTop_toTopOf="@+id/homeTeamBadge"
+        app:layout_constraintBottom_toBottomOf="@+id/homeTeamBadge"
+        app:layout_constraintRight_toLeftOf="@+id/homeTeamBadge"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/blackText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:id="@+id/homeTeamGoals"
+        app:layout_constraintTop_toTopOf="@+id/vs"
+        app:layout_constraintBottom_toBottomOf="@+id/vs"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintRight_toLeftOf="@+id/vs"
+        android:text="HG"
+        android:textColor="@color/blackText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:id="@+id/vs"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/blackText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:id="@+id/awayTeamGoals"
+        android:text="AG"
+        app:layout_constraintTop_toTopOf="@+id/vs"
+        app:layout_constraintBottom_toBottomOf="@+id/vs"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintLeft_toRightOf="@+id/vs"
+        android:textColor="@color/blackText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:id="@+id/awayTeamName"
+        android:text="awayTeam"
+        app:layout_constraintTop_toTopOf="@+id/awayTeamBadge"
+        app:layout_constraintBottom_toBottomOf="@+id/awayTeamBadge"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/awayTeamBadge"
+        android:textColor="@color/blackText" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/awayTeamBadge"
+        app:layout_constraintTop_toTopOf="@+id/vs"
+        app:layout_constraintBottom_toBottomOf="@+id/vs"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/awayTeamGoals" />
+
+</android.support.constraint.ConstraintLayout>

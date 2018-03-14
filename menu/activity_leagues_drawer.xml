@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <group android:checkableBehavior="single"
+        android:background="@color/white">
+        <item
+            android:id="@+id/nav_leagues"
+            android:icon="?android:attr/actionModeCopyDrawable"
+            android:title="@string/nav_leagues"
+            android:checked="true" />
+        <!--ADDING LEAGUE CODES ITEM start-->
+        <item
+            android:id="@+id/nav_league_codes"
+            android:icon="?android:attr/actionModeCopyDrawable"
+            android:title="@string/nav_Clubs"
+            android:checked="false"
+            android:checkable="false" />
+        <!--ADDING LEAGUE CODES ITEM end-->
+        <item
+            android:id="@+id/nav_fixtures_and_results"
+            android:icon="?android:attr/actionModePasteDrawable"
+            android:title="@string/nav_fixtures_and_results"
+            android:checked="false"
+            android:checkable="false" />
+        <item
+            android:id="@+id/nav_how_to_play"
+            android:icon="@android:drawable/ic_dialog_info"
+            android:title="@string/nav_how_to_play"
+            android:checked="false"
+            android:checkable="false" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/nav_profile"
+            android:checked="false"
+            android:checkable="false" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@android:drawable/ic_menu_help"
+            android:title="@string/nav_help"
+            android:checked="false"
+            android:checkable="false" />
+
+    </group>
+
+</menu>

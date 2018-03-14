@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#595959</color>
+
+  <!--  <color name="primary_color">#009688</color> -->
+    <color name="primary_color">#5bf</color>
+    <color name="secondary_color">#595959</color>
+    <color name="tertiary_color">#F0ECEB</color>
+    <color name="black_text">#000</color>
+    <color name="white_text">#FFF</color>
+    <color name="red_text">#F00</color>
+    <color name="green_color">#1FF</color>
+
+    <!--ADDONS-->
+
+        <color name="blackText">#000</color>
+        <color name="whiteText">#FFF</color>
+        <color name="white">#FFF</color>
+        <color name="redText">#F00</color>
+        <color name="goldCustom">#e6b800</color>
+
+        <color name="link">#3F51B5</color>
+        <color name="background_grey">#222222</color>
+        <!-- <color name=" background_material_light"> </color>-->
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_manage_league"
+        android:icon="?android:attr/actionModeCopyDrawable"
+        android:title="@string/manage_league_page_name"
+        android:checked="true" />
+
+</menu>

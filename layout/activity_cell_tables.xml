@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_text"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp"
+    >
+
+    <ImageView
+        android:id="@+id/pageTitle"
+        android:layout_width="391dp"
+        android:layout_height="288dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/eye_logo" />
+
+    <TextView
+        android:id="@+id/textView_pageTitle"
+        android:layout_width="282dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="***DATA/Connection Test Page***"
+        android:textAlignment="center"
+        android:textColor="@color/goldCustom"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBack"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/removeChild"
+        tools:layout_editor_absoluteY="290dp" />
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        app:layout_constraintLeft_toRightOf="@+id/textBox1"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:alpha="0.70"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="1.0" />
+
+    <EditText
+        android:id="@+id/textBox1"
+        android:layout_width="129dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:hint="Info to send"
+        android:inputType="textPersonName"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sendButton"
+        android:layout_marginTop="-8dp"
+        android:textColorHint="@color/green_color"
+        android:textColor="@color/green_color"
+        />
+
+    <Button
+        android:id="@+id/removeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="15dp"
+        android:text="Clear"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toRightOf="@+id/editText_removeData"
+        app:layout_constraintRight_toRightOf="@+id/sendButton"
+        app:layout_constraintTop_toBottomOf="@+id/sendButton"
+        android:textColorHint="@color/green_color"
+        android:alpha="0.70"
+        />
+
+    <EditText
+        android:id="@+id/editText_removeData"
+        android:layout_width="143dp"
+        android:layout_height="38dp"
+        android:ems="10"
+        android:hint="Node to remove"
+        android:inputType="textPersonName"
+        android:visibility="visible"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/removeButton"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/removeButton"
+        android:layout_marginBottom="8dp"
+        android:textColorHint="@color/green_color"
+        android:textColor="@color/green_color"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editText_addChildNode"
+        android:layout_width="145dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="Child to add"
+        android:inputType="textPersonName"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button_addChildNode"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_addChildNode"
+        android:layout_marginBottom="8dp"
+        android:textColorHint="@color/green_color"
+        android:textColor="@color/green_color"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/button_addChildNode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add child"
+        app:layout_constraintLeft_toRightOf="@+id/editText_addChildNode"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintTop_toBottomOf="@+id/removeButton"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="@+id/sendButton"
+        app:layout_constraintHorizontal_bias="0.8"
+        android:alpha="0.70"/>
+
+    <EditText
+        android:id="@+id/editText_removeChildNode"
+        android:layout_width="153dp"
+        android:layout_height="38dp"
+        android:ems="10"
+        android:hint="Child to remove"
+        android:inputType="textPersonName"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/removeChild"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/removeChild"
+        android:layout_marginBottom="8dp"
+        android:textColorHint="@color/green_color"
+        android:textColor="@color/green_color"/>
+
+    <Button
+        android:id="@+id/removeChild"
+        android:layout_width="95dp"
+        android:layout_height="64dp"
+        android:text="remove Child"
+        android:visibility="visible"
+        app:layout_constraintLeft_toRightOf="@+id/editText_removeChildNode"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="@+id/sendButton"
+        android:layout_marginTop="2dp"
+        app:layout_constraintTop_toBottomOf="@+id/button_addChildNode"
+        app:layout_constraintHorizontal_bias="0.903"
+        android:alpha="0.70"/>
+
+    <EditText
+        android:id="@+id/editText_sendChildBox"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="Child"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/green_color"
+        android:textColor="@color/green_color"
+        app:layout_constraintRight_toLeftOf="@+id/sendButton"
+        android:layout_marginRight="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/textBox1"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sendButton"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintTop_toTopOf="@+id/sendButton"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

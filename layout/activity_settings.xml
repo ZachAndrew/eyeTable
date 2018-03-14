@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_settings"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="andrew.zach.eyeTableP1.SettingsActivity">
+
+    <TextView
+        android:text="LastManStanding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView75"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="serif"
+        android:textSize="30sp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="normal|bold|italic"
+        tools:ignore="UnusedAttribute" />
+
+    <TextView
+        android:text="Sounds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView76"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintHorizontal_bias="0.33"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/toggleButton"
+        android:textColor="@color/blackText" />
+
+    <ToggleButton
+        android:text="Sounds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleButton"
+        android:layout_marginStart="24dp"
+        app:layout_constraintLeft_toRightOf="@+id/textView76"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView75" />
+
+    <TextView
+        android:text="Settings notifications"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView77"
+        android:textSize="18sp"
+        android:textColor="@color/blackText"
+        app:layout_constraintRight_toRightOf="@+id/textView76"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintBaseline_toBaselineOf="@+id/toggleButton2" />
+
+    <ToggleButton
+        android:text="Toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleButton2"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton"
+        app:layout_constraintLeft_toLeftOf="@+id/toggleButton" />
+
+    <TextView
+        android:text="@string/log_out_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView78"
+        android:layout_marginTop="120dp"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton2"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        android:textSize="18sp"
+        android:textColor="@color/link"
+        android:onClick="welcome"/>
+</android.support.constraint.ConstraintLayout>

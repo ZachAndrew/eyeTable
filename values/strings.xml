@@ -1,0 +1,191 @@
+<resources>
+    <string name="app_name">eyeTable</string>
+
+    <!-- Page Names -->
+    <string name="welcome_page_name">Welcome</string>
+    <string name="sign_up_page_name">Sign Up</string>
+    <string name="email_verification_page_name">Email Verification</string>
+    <string name="log_in_page_name">Log In</string>
+    <string name="password_reset_page_name">Password Reset</string>
+    <string name="leagues_page_name">Activities</string>
+    <string name="create_league_page_name">Create Module</string>
+    <string name="league_created_page_name">Module Created</string>
+    <string name="join_league_page_name">Join League</string>
+    <string name="view_league_page_name">View League</string>
+    <string name="manage_league_page_name">Manage Modules/Clubs</string>
+    <string name="pick_team_page_name">Pick Team</string>
+    <string name="users_teams_page_name">Users Teams</string>
+    <string name="fixtures_and_results_page_name">Fixtures / Results</string>
+    <string name="how_to_play_page_name">How To Use</string>
+    <string name="profile_page_name">Profile</string>
+    <string name="change_name_page_name">Change Name</string>
+    <string name="change_email_page_name">Change Email</string>
+    <string name="change_password_page_name">Change Password</string>
+    <string name="delete_account_page_name">Delete Account</string>
+    <string name="help_page_name">Help</string>
+
+    <!-- Links -->
+    <string name="sign_up_link"><u>Si</u>g<u>n U</u>p</string>
+    <string name="log_in_link"><u>Lo</u>g<u> In</u></string>
+    <string name="forgotten_password_link"><u>For</u>g<u>ot </u>p<u>assword?</u></string>
+    <string name="leagues_link">Activity Page</string>
+    <string name="manage_league_link"><u>Mana</u>g<u>e</u></string>
+    <string name="log_out_link">Log Out</string>
+    <string name="edit_link"><u>Edit</u></string>
+
+    <!-- Forms -->
+    <string name="form_first_name">First Name</string>
+    <string name="form_last_name">Last Name</string>
+    <string name="form_email">Email</string>
+    <string name="form_password">Password</string>
+    <string name="form_confirm_password">Confirm Password</string>
+    <string name="form_league_name">League Name</string>
+    <string name="form_entry_fee">Entry Fee:</string>
+    <string name="form_entry_fee_five">5</string>
+    <string name="form_entry_fee_ten">10</string>
+    <string name="form_entry_fee_twenty">15</string>
+    <string name="form_entry_fee_fifty">Other</string>
+    <string name="form_league_code">League Code</string>
+    <string name="form_old_password">Old Password</string>
+    <string name="form_new_password">New Password</string>
+
+    <!-- Welcome Page -->
+    <string name="welcome_page_message">Welcome to</string>
+    <string name="slash">/</string>
+
+    <!-- Sign Up Page -->
+    <string name="already_have_an_account">Already have an account?</string>
+
+    <!-- Email Verification Page -->
+    <string name="email_verification_message_one">An email has been sent to you to verify your account.</string>
+    <string name="email_verification_message_two">If you have not received an email please enter your email address below and click the send button.</string>
+    <string name="email_verification_message_three">You can log in once you have verified your account.</string>
+    <string name="send">Send</string>
+
+    <!-- Log In Page -->
+    <string name="dont_have_an_account">Don\'t have an account?</string>
+
+    <!-- Password Reset Page -->
+    <string name="password_reset_message_one">If you have a forgotten your password please enter your email address below and request a password reset.</string>
+    <string name="password_reset_message_two">You can log in once you have reset your password.</string>
+
+    <!-- Navigation Drawer -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- Leagues Page -->
+    <string name="leagues_my_leagues">My Activities</string>
+    <string name="leagues_my_all_leagues">All Activities</string>
+
+    <!-- Create League Page -->
+    <string name="create_league_message">*This app does not accept payment of entry fees.*</string>
+
+    <!-- League Created Page -->
+    <string name="league_created_message_one">Your activity was successfully created. Here is your activity code that is used by other users to access your activity.</string>
+    <string name="league_created_message_two">This lecture code is used to join your lecture.</string>
+    <string name="league_created_message_three">This code can also be accessed from the manage section of your lectures.</string>
+
+    <!-- Join League Page -->
+    <string name="join_league_message">*Contact the activity owner for the activity name and activity code.*</string>
+
+    <!-- View League Page -->
+    <string name="view_league_deadline">Deadline:</string>
+    <string name="view_league_your_pick">Your Pick:</string>
+    <string name="view_league_no_deadline">No deadline.</string>
+    <string name="view_league_no_team_seletced">No team selected.</string>
+    <string name="view_league_pick_change_team">Pick / Change Team</string>
+    <string name="view_league_standings">Standings</string>
+
+    <!-- Manage League Page -->
+    <string name="manage_league_league_code">League Code:</string>
+    <string name="manage_league_remove_players">Remove Players</string>
+    <string name="manage_league_delete_league">Delete League</string>
+    <string name="manage_league_select_a_player">Select a player from below.</string>
+    <string name="manage_league_leave_league">Leave League</string>
+
+    <!-- Pick Team Page -->
+    <string name="pick_team_available_teams">Available Teams</string>
+
+    <!-- Users Teams Page -->
+    <string name="users_teams_picks">\'Players Name\' Picks</string>
+
+    <!-- Fixtures / Results -->
+    <string name="fixtures_next_button">Next</string>
+    <string name="fixtures_previous_button">Previous</string>
+
+    <!-- How To Play Page -->
+    <string name="how_to_play_rules">Rules</string>
+    <string name="how_to_play_rule_one">Rule 1</string>
+    <string name="how_to_play_rule_two">Rule 2</string>
+    <string name="how_to_play_rule_three">Rule 3</string>
+    <string name="how_to_play_rule_four">Rule 4</string>
+    <string name="how_to_play_rule_five">Rule 5</string>
+    <string name="how_to_play_rule_six">Rule 6</string>
+    <string name="how_to_play_create_league">Create A League</string>
+    <string name="how_to_play_create_league_one">Create A League 1</string>
+    <string name="how_to_play_create_league_two">Create A League 2</string>
+    <string name="how_to_play_create_league_three">Create A League 3</string>
+    <string name="how_to_play_join_league">Join A League</string>
+    <string name="how_to_play_join_league_one">Join A League 1</string>
+    <string name="how_to_play_join_league_two">Join A League 2</string>
+    <string name="how_to_play_join_league_three">Join A League 3</string>
+    <string name="nav_log_out">Log Out</string>
+
+    <!-- Profile Page -->
+    <string name="profile_name">Name:</string>
+    <string name="profile_email">Email:</string>
+
+    <!-- Change Name Page -->
+    <string name="change_name_message_one">Enter your new name below.</string>
+    <string name="save_changes_button">Save Changes</string>
+
+    <!-- Change Email Page -->
+    <string name="change_email_message_one">Enter your new email below.</string>
+    <string name="change_email_new_email">New Email</string>
+    <string name="change_email_message_two">*If you choose to change your email you will be signed out and asked to verify your new email address.</string>
+
+    <!-- Change Password Page -->
+    <string name="change_password_message_one">Enter your old password below.</string>
+    <string name="change_password_message_two">Enter your new password below.</string>
+
+    <!-- Delete Account Page -->
+    <string name="delete_account_message_one">If you would like to permanently delete your account please enter your email address and password below.</string>
+
+    <!-- Sample -->
+    <string name="league_created_sample_code">f74gh-eu84g-wfh89-fhu39-jhn32</string>
+    <string name="league_name_sample">\'League Name\'</string>
+    <string name="league_code_sample">\'League Code\'</string>
+    <string name="team_name_sample">\'Team Name\'</string>
+    <string name="player_name_sample">\'Player Name\'</string>
+    <string name="gameweek">\'Gameweek No.\'</string>
+    <string name="deadline">\'Deadline\'</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="title_activity_help">HelpActivity</string>
+
+    <!--ADDONS 30/10/2017-->
+    <string name="nav_fixtures_and_results">eyeTable View</string>
+    <string name="nav_leagues">Modules</string>
+    <string name="nav_Clubs">Clubs/Socs</string>
+    <string name="nav_how_to_play">How To Play</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_help">Help</string>
+    <string name="league_codes">Clubs/Socs</string>
+
+    <string name="remove_players">Remove Players</string>
+    <string name="requests">Requests</string>
+    <string name="remove_button">Remove Button</string>
+    <string name="accept_button">Accept Button</string>
+    <string name="delete_league">Delete League</string>
+
+    <!--Days of the week -->
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+
+
+
+</resources>
